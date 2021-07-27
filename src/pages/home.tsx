@@ -18,7 +18,7 @@ function Home()
             <Typography variant="h4" >
                 You Have to Access Evething Here.
             </Typography>
-            <Button variant="contained" color="primary" className={classes.homeButtons}>
+            <Button variant="contained" color="primary" className={classes.homeButtons} href="/signup">
                 Join Now
             </Button>
             <Button variant="outlined" color="primary" className={classes.homeButtons}>
