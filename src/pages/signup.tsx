@@ -2,6 +2,7 @@ import {Container, Typography, TextField, Button, Theme, makeStyles, Avatar} fro
 import PersonAddSharpIcon from '@material-ui/icons/PersonAddSharp';
 import firebase from "firebase";
 import React, { FormEvent, useState } from "react"
+import { Link } from "react-router-dom";
 
 const styles = makeStyles((theme:Theme)=>(
 {
@@ -100,6 +101,12 @@ export default function Signup(){
                         Sign up
                     </Button>
                 </form>
+                <div>
+                    <span>Already Have an Account? </span>
+                    <Link to="signin">
+                        Signin
+                    </Link>
+                </div>
             </div>
         </Container>
     )

@@ -1,7 +1,8 @@
 import React, { FormEvent, useState } from "react";
-import {Avatar, Button, Container, makeStyles, TextField, Theme, Typography} from "@material-ui/core";
+import {Avatar, Button, Container, makeStyles, TextField, Theme, Typography, Link as UILink} from "@material-ui/core";
 import { LockOpenOutlined } from "@material-ui/icons";
 import firebase from "firebase";
+import { Link } from "react-router-dom";
 
 
 const styles = makeStyles((theme:Theme)=>{
@@ -24,7 +25,6 @@ const styles = makeStyles((theme:Theme)=>{
         },
         submit:{
             marginTop:theme.spacing(1),
-
         }
     })
 })
@@ -79,9 +79,12 @@ export default function Signin()
                         Sign In
                     </Button>
                 </form>
-                <Button variant="text" color="primary">
-                    haven't account? Sign UP.
-                </Button>
+                <div>
+                    <Typography>Don't Have an Account? </Typography>
+                    <UILink component={Link} to="signup">
+                        Sign Up
+                    </UILink>
+                </div>
             </div>
         </Container>
     )
