@@ -1,5 +1,6 @@
 import React from "react";
-import { Button, makeStyles, Typography } from "@material-ui/core";
+import { Button, makeStyles, Typography, Container } from "@material-ui/core";
+// import { Container } from "react-dom";
 const style = makeStyles({
     homeButtons:{
         margin:"4px"
@@ -10,7 +11,7 @@ function Home()
 {
     const classes = style();
     return (
-        <div>
+        <Container>
             <Typography variant="h2">
                 Wellcome Friend!
             </Typography>
@@ -23,7 +24,7 @@ function Home()
             <Button variant="outlined" color="primary" className={classes.homeButtons}>
                 Learn More
             </Button>
-        </div>
+        </Container>
     )
 }
 
